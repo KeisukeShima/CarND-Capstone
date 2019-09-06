@@ -1,6 +1,3 @@
-from pid import PID
-from yaw_controller import YawController
-import math
 
 GAS_DENSITY = 2.858
 ONE_MPH = 0.44704
@@ -12,8 +9,7 @@ class Controller(object):
 
     def __init__(self, vehicle_mass, fuel_capacity, brake_deadband, decel_limit, accel_limit, wheel_radius, wheel_base, steer_ratio, max_lat_accel, max_steer_angle):
 
-        min_speed = 0 
-
+        min_speed = 0
         self.vehicle_mass = vehicle_mass
         self.fuel_capacity = fuel_capacity
         self.brake_deadband = brake_deadband
